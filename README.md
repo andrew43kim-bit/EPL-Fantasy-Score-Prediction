@@ -1,6 +1,6 @@
 # FPL Points Prediction — ML Pipeline
 
-A machine learning pipeline that predicts Fantasy Premier League (FPL) total points for Premier League players using a combination of FPL data and underlying EPL performance statistics.
+A machine learning pipeline that predicts Fantasy Premier League (FPL) total points for Premier League players using a combination of FPL data and underlying EPL performance statistics. This tool helps FPL manager who make £- constrained start/sit decisions every week by providing player picks using a value score (predicted points/ cost). 
 
 ---
 
@@ -66,9 +66,10 @@ Two datasets are merged on player identity:
 | Decision Tree (tuned)      | 19.14     |
 | Decision Tree (baseline)   | 19.18     |
 
-**Best model: Lasso (alpha=0.1) — RMSE of 7.98 FPL points**
+**Best model: Lasso (alpha=0.1) — RMSE of 7.98 FPL points ~ 6% error for high-scoring players (100+ pts)**
 
-The regularised linear models (Lasso, Ridge) outperform tree-based models, indicating that FPL points have a largely linear relationship with underlying performance statistics.
+- Lasso model achieves an 82.7% improvement over a mean-prediction baseline (RMSE: 46.15).
+- The regularised linear models (Lasso, Ridge) outperform tree-based models, indicating that FPL points have a largely linear relationship with underlying performance statistics. 
 
 ---
 
